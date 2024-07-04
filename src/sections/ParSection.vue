@@ -2,10 +2,7 @@
 
 <template>
   <!-- Hero Section Start -->
-  <div
-    id="par-mums-section"
-    class="container mx-auto px-5 overflow-x-hidden lg:overflow-x-visible"
-  >
+  <div id="par" class="container mx-auto px-5 overflow-x-hidden lg:overflow-x-visible">
     <section class="grid grid-cols-none lg:grid-cols-2 pb-16 pt-8 items-center">
       <div class="lg:w-5/6 order-2 lg:order-none">
         <h1
@@ -20,7 +17,7 @@
           nozari ar individuālu pieeju katra klienta vēlmēm.
         </p>
         <div class="flex justify-center lg:justify-start mt-10">
-          <LinkButton btn-type="primary" link="#socials-section">Sazinies</LinkButton>
+          <LinkButton btn-type="primary" link="#sazinies">Sazinies</LinkButton>
           <LinkButton btn-type="muted" link="#pakalpojumi">Pakalpojumi</LinkButton>
         </div>
       </div>

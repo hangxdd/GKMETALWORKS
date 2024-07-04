@@ -5,7 +5,7 @@ import { ChatBubbleLeftRightIcon } from "@heroicons/vue/24/solid";
 
 <template>
   <!-- Socials Section Start -->
-  <div id="socials-section" class="container mx-auto px-5 md:w-4/5">
+  <div id="sazinies" class="container mx-auto px-5 md:w-4/5">
     <section class="py-16 pt-18">
       <div class="w-4/5 md:w-3/5 mx-auto">
         <h2 class="text-3xl md:text-4xl font-theme-heading font-medium text-center">

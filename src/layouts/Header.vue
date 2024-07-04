@@ -39,7 +39,7 @@ let toggleMobileNav = () => {
           class="space-x-10 font-theme-heading font-medium items-center hidden md:flex flex-col space-y-7 md:space-y-0 md:flex-row"
         >
           <li class="uppercase hover:text-theme-secondary transition duration-200">
-            <a href="#par-mums-section" v-smooth-scroll>Par mums</a>
+            <a href="#par" v-smooth-scroll>Par mums</a>
           </li>
 
           <li class="uppercase hover:text-theme-secondary transition duration-200">
@@ -51,7 +51,7 @@ let toggleMobileNav = () => {
           <li
             class="uppercase bg-theme-secondary px-6 py-2 text-white rounded shadow-md hover:bg-white border-2 border-transparent hover:border-theme-secondary hover:text-theme-secondary cursor-pointer transition duration-200"
           >
-            <a href="#socials-section" v-smooth-scroll>Sazinies</a>
+            <a href="#sazinies" v-smooth-scroll>Sazinies</a>
           </li>
         </ul>
       </nav>
@@ -90,7 +90,7 @@ let toggleMobileNav = () => {
           <li
             class="hover:text-theme-secondary transition duration-200 py-4 border-t border-b border-theme-grayish-blue w-full text-center"
           >
-            <a @click="toggleMobileNav()" href="#par-mums-section">Par mums</a>
+            <a @click="toggleMobileNav()" href="#par">Par mums</a>
           </li>
           <li
             class="hover:text-theme-secondary transition duration-200 py-4 border-b border-theme-grayish-blue w-full text-center"

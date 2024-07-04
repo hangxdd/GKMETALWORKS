@@ -1,16 +1,16 @@
 <script setup>
-import HeroSection from "../sections/HeroSection.vue";
+import ParSection from "../sections/ParSection.vue";
 import PakalpojumiSection from "../sections/PakalpojumiSection.vue";
-import SocialsSection from "../sections/SocialsSection.vue";
+import SaziniesSection from "../sections/SaziniesSection.vue";
 import FaqSection from "../sections/FaqSection.vue";
 </script>
 
 <template>
-  <HeroSection />
+  <ParSection />
 
   <PakalpojumiSection />
 
-  <SocialsSection />
+  <SaziniesSection />
 
   <FaqSection />
 </template>

@@ -18,7 +18,7 @@
             <li
               class="uppercase text-white hover:text-theme-secondary transition duration-200"
             >
-              <a href="#par-mums-section" v-smooth-scroll>Par mums</a>
+              <a href="#par" v-smooth-scroll>Par mums</a>
             </li>
             <li
               class="uppercase text-white hover:text-theme-secondary transition duration-200"
