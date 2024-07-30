@@ -1,9 +1,48 @@
 <script setup>
 import pakalpojumi from "../data/pakalpojumi.js";
-import { ref, reactive } from "vue";
+import { ref, computed } from "vue";
+import ImageModal from "../components/ImageModal.vue";
 
 let isOpen = ref(1);
 let currentIndex = ref(0);
+let showModal = ref(false);
+const maxDots = 5; // Set the maximum number of visible dots
+
+const openModal = () => {
+  showModal.value = true;
+};
+const closeModal = () => {
+  showModal.value = false;
+};
+
+const visibleDots = computed(() => {
+  const images = pakalpojumi[isOpen.value - 1].details.images;
+  const totalImages = images.length;
+
+  if (totalImages <= maxDots) {
+    return images.map((image, index) => ({ image, index }));
+  }
+
+  const start = Math.max(0, currentIndex.value - Math.floor(maxDots / 2));
+  const end = Math.min(totalImages, start + maxDots);
+
+  return images
+    .slice(start, end)
+    .map((image, index) => ({ image, index: start + index }));
+});
+
+const prevDot = () => {
+  if (currentIndex.value > 0) {
+    currentIndex.value--;
+  }
+};
+
+const nextDot = () => {
+  const images = pakalpojumi[isOpen.value - 1].details.images;
+  if (currentIndex.value < images.length - 1) {
+    currentIndex.value++;
+  }
+};
 </script>
 
 <template>
@@ -56,16 +95,37 @@ let currentIndex = ref(0);
             v-show="isOpen === pakalpojums.id"
             class="grid gap-8 lg:gap-16 lg:grid-cols-2 items-center"
           >
-            <div class="relative">
-              <img
-                class="z-10 w-full scale-90 transform transition-transform duration-500 ease-in-out"
-                :src="pakalpojums.details.images[currentIndex]"
-              />
-              <div class="absolute inset-x-0 flex justify-center space-x-2">
+            <div class="relative flex flex-col items-center">
+              <transition name="fade" mode="out-in">
+                <img
+                  v-if="isOpen === pakalpojums.id"
+                  :key="pakalpojums.details.images[currentIndex]"
+                  class="z-10 w-2/5 scale-90 hover:scale-105 transform transition-transform duration-500 ease-in-out cursor-pointer"
+                  :src="pakalpojums.details.images[currentIndex]"
+                  @click="openModal"
+                />
+              </transition>
+              <div class="flex justify-center items-center space-x-2 mt-5">
+                <span v-if="currentIndex > 0" @click="prevDot" class="cursor-pointer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    class="h-6 w-6 text-[#FA5757] hover:scale-110 duration-100"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </span>
                 <span
-                  v-for="(image, index) in pakalpojums.details.images"
+                  v-for="(dot, index) in visibleDots"
                   :key="index"
-                  @click="currentIndex = index"
+                  @click="currentIndex = dot.index"
                   class="cursor-pointer"
                 >
                   <svg
@@ -73,10 +133,10 @@ let currentIndex = ref(0);
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    class="h-6 w-6 text-[#FA5757]"
+                    class="h-6 w-6 text-[#FA5757] hover:scale-110 duration-100"
                   >
                     <circle
-                      v-if="currentIndex === index"
+                      v-if="currentIndex === dot.index"
                       cx="12"
                       cy="12"
                       r="10"
@@ -93,6 +153,26 @@ let currentIndex = ref(0);
                       stroke-width="2"
                       fill="transparent"
                     ></circle>
+                  </svg>
+                </span>
+                <span
+                  v-if="currentIndex < pakalpojums.details.images.length - 1"
+                  @click="nextDot"
+                  class="cursor-pointer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    class="h-6 w-6 text-[#FA5757] hover:scale-110 duration-100"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 </span>
               </div>
@@ -114,4 +194,21 @@ let currentIndex = ref(0);
     </section>
   </div>
   <!-- Pakalpojumi Section End -->
+
+  <ImageModal
+    :show="showModal"
+    :imageSrc="pakalpojumi[isOpen - 1].details.images[currentIndex]"
+    @close="closeModal"
+  />
 </template>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
