@@ -14,8 +14,8 @@ let isOpen = ref(1);
           Biežāk Uzdotie Jautājumi
         </h2>
         <p class="text-theme-grayish-blue text-center mt-7 font-theme-content text-lg">
-          Šeit ir visbiežāk uzdotie jautājumi. Ja kāds no jūsu šeit nav, droši sazinaties
-          ar mani un sniegšu uz to atbildi.
+          Šeit ir visbiežāk uzdotie jautājumi, ja kāds no vēlamiem šeit nav, droši
+          sazinaties un sniegsim uz to atbildi.
         </p>
       </div>
 

@@ -1,23 +1,23 @@
 const faqs = [
     {
         id: 1,
-        title: "Loren Ipsum?",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        title: "Kas ir GK&METĀLS?",
+        description: "Šis ir augošs uzņēmums, kas piedāvā plaša spektra metālizstrādājumu izgatavošanu un metināšanas pakalpojumus.",
     },
     {
         id: 2,
-        title: "Loren Ipsum?",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        title: "Kāpēc izvēlēties tieši GK&METĀLS pakalpojumus?",
+        description: "Mums rūp - augsta produktu kvalitāte, termiņos izpildīti darbi, konkurētspējīgas cenas un katra klienta vēlmes ir mūsu prioritāte.",
     },
     {
         id: 3,
-        title: "Loren Ipsum?",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        title: "Cik ātra ir darba izpilde?",
+        description: "Produkta/pasūtījuma laiks ir atkarīgs no tā sarežģītības pakāpes un apjoma.",
     },
     {
         id: 4,
-        title: "Loren Ipsum?",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        title: "Kādi ir apmaksas nosacījumi?",
+        description: "Pēc vienošanās (izmaksas atšķiras, jo katram pakalpojumam ir savs izcenojums).",
     },
 ];
 

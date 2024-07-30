@@ -9,11 +9,10 @@ import { ChatBubbleLeftRightIcon } from "@heroicons/vue/24/solid";
     <section class="py-16 pt-18">
       <div class="w-4/5 md:w-3/5 mx-auto">
         <h2 class="text-3xl md:text-4xl font-theme-heading font-medium text-center">
-          Sazinies ar mani
+          Sazinies
         </h2>
         <p class="text-theme-grayish-blue text-center text-lg font-theme-content mt-7">
-          Droši sazinies ar mani caur vienu no šiem kanāliem un tad jau uz tālāku
-          sadarbību!
+          Droši sazinies caur vienu no šiem kanāliem!
         </p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">

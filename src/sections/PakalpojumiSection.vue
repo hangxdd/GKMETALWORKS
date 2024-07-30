@@ -1,8 +1,9 @@
 <script setup>
 import pakalpojumi from "../data/pakalpojumi.js";
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 
 let isOpen = ref(1);
+let currentIndex = ref(0);
 </script>
 
 <template>
@@ -35,7 +36,10 @@ let isOpen = ref(1);
             class="w-full md:w-56 cursor-pointer hover:text-theme-secondary transition duration-200 border-b-2 border-t-2 md:border-t-0 flex justify-center"
           >
             <a
-              @click.prevent="isOpen = pakalpojums.id"
+              @click.prevent="
+                isOpen = pakalpojums.id;
+                currentIndex = 0;
+              "
               href="#"
               :class="isOpen === pakalpojums.id ? ' border-theme-secondary' : ''"
               class="py-5 md:border-b-0 border-b-4"
@@ -50,23 +54,56 @@ let isOpen = ref(1);
         <template v-for="pakalpojums in pakalpojumi" :key="pakalpojums.id">
           <div
             v-show="isOpen === pakalpojums.id"
-            class="grid gap-32 lg:grid-cols-2 items-center"
+            class="grid gap-8 lg:gap-16 lg:grid-cols-2 items-center"
           >
             <div class="relative">
-              <img class="z-10 w-full scale-90" :src="pakalpojums.details.imageUrl" />
-              <div
-                class="-z-10 bg-theme-primary h-52 w-96 sm:h-80 sm:w-full rounded-r-full absolute -left-56 -bottom-16"
-              ></div>
+              <img
+                class="z-10 w-full scale-90 transform transition-transform duration-500 ease-in-out"
+                :src="pakalpojums.details.images[currentIndex]"
+              />
+              <div class="absolute inset-x-0 flex justify-center space-x-2">
+                <span
+                  v-for="(image, index) in pakalpojums.details.images"
+                  :key="index"
+                  @click="currentIndex = index"
+                  class="cursor-pointer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    class="h-6 w-6 text-[#FA5757]"
+                  >
+                    <circle
+                      v-if="currentIndex === index"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="currentColor"
+                    ></circle>
+                    <circle
+                      v-else
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="transparent"
+                    ></circle>
+                  </svg>
+                </span>
+              </div>
             </div>
             <div>
               <h3
-                class="font-theme-heading text-2xl md:text-3xl font-medium text-center lg:text-left"
+                class="font-bold text-xl md:text-2xl lg:text-3xl text-center lg:text-left mt-4"
               >
                 {{ pakalpojums.details.title }}
               </h3>
-              <p
-                class="mt-7 font-theme-content text-lg text-theme-grayish-blue text-center lg:text-left"
-              >
+              <p class="mt-2 text-gray-700 text-center lg:text-left">
                 {{ pakalpojums.details.description }}
               </p>
             </div>

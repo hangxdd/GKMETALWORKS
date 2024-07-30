@@ -10,7 +10,7 @@
             <div class="h-12 w-12">
               <img src="images/gkmasterworks-logo.png" />
             </div>
-            <h1 href="/" class="text-sm font-semibold text-white">GK Master Works</h1>
+            <h1 href="/" class="text-sm font-semibold text-white">GK&METĀLS</h1>
           </div>
           <ul
             class="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-8 text-xs text-center md:text-left font-theme-heading"

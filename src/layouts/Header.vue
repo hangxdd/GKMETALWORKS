@@ -13,10 +13,10 @@ let toggleMobileNav = () => {
   <div class="container mx-auto px-5">
     <header class="flex justify-between py-12 items-center">
       <div class="flex justify-center items-center">
-        <div class="h-24 w-24">
+        <div class="h-24 w-24 md:h-24 md:w-24">
           <img src="images/gkmasterworks-logo.png" />
         </div>
-        <h1 href="/" class="text-2xl font-bold">GK Master Works</h1>
+        <h1 href="/" class="ml-2 text-2xl font-bold hidden lg:block">GK&METĀLS</h1>
       </div>
 
       <nav class="flex justify-end flex-col md:flex-row">
@@ -64,10 +64,7 @@ let toggleMobileNav = () => {
       >
         <div class="flex justify-between items-center">
           <div class="flex items-center">
-            <div class="h-24 w-24">
-              <img src="images/gkmasterworks-logo.png" />
-            </div>
-            <h1 href="/" class="text-2xl font-bold text-white">GK Master Works</h1>
+            <h1 href="/" class="text-2xl font-bold text-white">GK&Metāls</h1>
           </div>
           <button @click="toggleMobileNav()" type="button" class="focus:outline-none">
             <svg
