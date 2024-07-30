@@ -1,5 +1,5 @@
-# GKMasterWorks
-Small startup welding company's "GK Master Works" website.
+# GK&Metāls
+Small startup welding company's "GK&Metāls" website.
 
 ### Install all neccessary packages
 > npm install
