@@ -6,7 +6,7 @@ import ImageModal from "../components/ImageModal.vue";
 let isOpen = ref(1);
 let currentIndex = ref(0);
 let showModal = ref(false);
-const maxDots = 5; // Set the maximum number of visible dots
+const maxDots = 3;
 
 const openModal = () => {
   showModal.value = true;
@@ -100,7 +100,7 @@ const nextDot = () => {
                 <img
                   v-if="isOpen === pakalpojums.id"
                   :key="pakalpojums.details.images[currentIndex]"
-                  class="z-10 w-2/5 scale-90 hover:scale-105 transform transition-transform duration-500 ease-in-out cursor-pointer"
+                  class="z-10 w-3/5 md:w-2/4 scale-90 hover:scale-105 transform transition-transform duration-500 ease-in-out cursor-pointer"
                   :src="pakalpojums.details.images[currentIndex]"
                   @click="openModal"
                 />
