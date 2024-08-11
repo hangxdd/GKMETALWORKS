@@ -8,7 +8,7 @@
     </div>
     <button
       @click="close"
-      class="z-10 absolute top-4 right-6 text-[#FA5757] hover:text-white duration-300 text-5xl font-bold"
+      class="z-10 absolute top-4 right-6 p-0 w-12 h-12 text-[#FA5757] hover:text-white rounded-full bg-white hover:bg-[#FA5757] duration-300 flex items-center justify-center text-2xl font-bold"
     >
       &times;
     </button>

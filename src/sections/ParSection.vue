@@ -13,8 +13,9 @@
         <p
           class="lg:text-xl mt-10 font-theme-content text-theme-grayish-blue text-center lg:text-left"
         >
-          Mazs uzņēmums, bet ar vēlmi attīstīties, piedāvājot plaša spektra darbības
-          nozari ar individuālu pieeju katra klienta vēlmēm.
+          GK&METALS piedāvā profesionālus metināšanas pakalpojumus, specializējoties
+          dažādu materiālu metināšanā. Nodrošinām augstu kvalitāti un precizitāti, lai
+          apmierinātu klientu individuālās vajadzības un vēlmes.
         </p>
         <div class="flex justify-center lg:justify-start mt-10">
           <LinkButton btn-type="primary" link="#sazinies">Sazinies</LinkButton>

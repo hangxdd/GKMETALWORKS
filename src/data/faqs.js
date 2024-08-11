@@ -1,12 +1,12 @@
 const faqs = [
     {
         id: 1,
-        title: "Kas ir GK&METĀLS?",
+        title: "Kas ir GK&METALS?",
         description: "Šis ir augošs uzņēmums, kas piedāvā plaša spektra metālizstrādājumu izgatavošanu un metināšanas pakalpojumus.",
     },
     {
         id: 2,
-        title: "Kāpēc izvēlēties tieši GK&METĀLS pakalpojumus?",
+        title: "Kāpēc izvēlēties tieši GK&METALS pakalpojumus?",
         description: "Mums rūp - augsta produktu kvalitāte, termiņos izpildīti darbi, konkurētspējīgas cenas un katra klienta vēlmes ir mūsu prioritāte.",
     },
     {
