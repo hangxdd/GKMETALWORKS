@@ -16,11 +16,6 @@ import { ChatBubbleLeftRightIcon } from "@heroicons/vue/24/solid";
         <div
           v-for="(social, index) in socials"
           :key="social.id"
-          :class="[
-            index === 0 ? 'lg:mb-10' : '',
-            index === 1 ? 'lg:mt-10' : '',
-            index === 2 ? 'lg:mt-20 lg:-mb-10' : '',
-          ]"
           class="shadow-lg rounded-lg"
         >
           <div class="flex justify-center mt-12">
