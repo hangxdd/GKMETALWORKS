@@ -3,7 +3,7 @@
     v-if="show"
     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50"
   >
-    <div class="relative bg-white rounded-lg shadow-lg overflow-hidden">
+    <div class="relative overflow-hidden scale-75 md:scale-95 rounded-lg">
       <img :src="imageSrc" class="max-w-full max-h-screen" />
     </div>
     <button

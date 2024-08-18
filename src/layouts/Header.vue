@@ -10,13 +10,18 @@ let toggleMobileNav = () => {
 
 <template>
   <!-- Navbar Start -->
-  <div class="container mx-auto px-5">
-    <header class="flex justify-between py-12 items-center">
-      <div class="flex justify-center items-center">
-        <div class="h-24 w-24 md:h-24 md:w-24">
+  <div class="container mx-auto px-4">
+    <header class="flex justify-between py-6 items-center">
+      <div class="flex justify-center items-center -space-10">
+        <div class="h-24 w-24 md:h-40 md:w-40">
           <img src="images/gkmasterworks-logo.png" />
         </div>
-        <h1 href="/" class="ml-2 text-2xl font-bold hidden lg:block">GK&METALS</h1>
+        <a
+          href="tel:+371 24 911 819"
+          class="ml-2 text-md md:text-2xl font-bold lg:block text-[#FA5757] hover:text-[#5368DF] hover:underline"
+        >
+          +371 24 911 819
+        </a>
       </div>
 
       <nav class="flex justify-end flex-col md:flex-row">
@@ -64,7 +69,7 @@ let toggleMobileNav = () => {
       >
         <div class="flex justify-between items-center">
           <div class="flex items-center">
-            <h1 href="/" class="text-2xl font-bold text-white">GK&METALS</h1>
+            <h1 href="/" class="text-2xl font-bold text-white">G.KMETALWORKS</h1>
           </div>
           <button @click="toggleMobileNav()" type="button" class="focus:outline-none">
             <svg

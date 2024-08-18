@@ -100,7 +100,7 @@ const nextDot = () => {
                 <img
                   v-if="isOpen === pakalpojums.id"
                   :key="pakalpojums.details.images[currentIndex]"
-                  class="z-10 w-3/5 md:w-2/4 scale-95 hover:scale-100 transform transition-transform duration-500 ease-in-out cursor-pointer"
+                  class="z-10 w-3/5 md:w-2/4 scale-95 hover:scale-100 rounded-lg transform transition-transform duration-500 ease-in-out cursor-pointer"
                   :src="pakalpojums.details.images[currentIndex]"
                   @click="openModal"
                 />
