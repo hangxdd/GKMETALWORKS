@@ -25,10 +25,15 @@
             >
               <a href="#pakalpojumi" v-smooth-scroll>Pakalpojumi</a>
             </li>
-            <li
+            <!-- <li
               class="uppercase text-white hover:text-theme-secondary transition duration-200"
             >
               <a href="#faq" v-smooth-scroll>Jautājumi</a>
+            </li> -->
+            <li
+              class="uppercase text-white hover:text-theme-secondary transition duration-200"
+            >
+              <a href="#sazinies" v-smooth-scroll>Sazinies</a>
             </li>
           </ul>
         </div>

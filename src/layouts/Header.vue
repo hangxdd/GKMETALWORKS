@@ -50,9 +50,9 @@ let toggleMobileNav = () => {
           <li class="uppercase hover:text-theme-secondary transition duration-200">
             <a href="#pakalpojumi" v-smooth-scroll>Pakalpojumi</a>
           </li>
-          <li class="uppercase hover:text-theme-secondary transition duration-200">
+          <!-- <li class="uppercase hover:text-theme-secondary transition duration-200">
             <a href="#faq" v-smooth-scroll>Jautājumi</a>
-          </li>
+          </li> -->
           <li
             class="uppercase bg-theme-secondary px-6 py-2 text-white rounded shadow-md hover:bg-white border-2 border-transparent hover:border-theme-secondary hover:text-theme-secondary cursor-pointer transition duration-200"
           >
@@ -99,11 +99,11 @@ let toggleMobileNav = () => {
           >
             <a @click="toggleMobileNav()" href="#pakalpojumi">Pakalpojumi</a>
           </li>
-          <li
+          <!-- <li
             class="hover:text-theme-secondary transition duration-200 py-4 border-b border-theme-grayish-blue w-full text-center"
           >
             <a @click="toggleMobileNav()" href="#faq">Jautājumi</a>
-          </li>
+          </li> -->
           <li
             class="bg-transparent border-2 rounded px-6 py-2 mt-6 w-full text-center cursor-pointer hover:text-theme-secondary transition duration-200"
           >
