@@ -12,7 +12,7 @@ import { ChatBubbleLeftRightIcon } from "@heroicons/vue/24/solid";
           Sazinies
         </h2>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
         <div
           v-for="(social, index) in socials"
           :key="social.id"

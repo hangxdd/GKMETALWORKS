@@ -3,15 +3,15 @@ const socials = [
         id: 1,
         icon: "images/instagram-logo.png",
         title: "Instagram",
-        subTitle: "@gkmetals83",
-        link: "https://www.instagram.com/gkmetals83/",
+        subTitle: "@g.kmetalworks",
+        link: "https://www.instagram.com/g.kmetalworks?igsh=OTdtemlnd2kyMzA1",
     },
     {
         id: 2,
         icon: "images/facebook-logo.png",
         title: "Facebook",
-        subTitle: "GK & Metāls",
-        link: "https://www.facebook.com/people/GK-Met%C4%81ls/61563279011833/",
+        subTitle: "GK Metalworks",
+        link: "https://www.facebook.com/share/rAxn2756jmUjJfwP/",
     },
     {
         id: 3,
@@ -19,6 +19,13 @@ const socials = [
         title: "WhatsApp",
         subTitle: "+371 24 911 819",
         link: "https://www.whatsapp.com/",
+    },
+    {
+        id: 4,
+        icon: "images/email-logo.png",
+        title: "E-Mail",
+        subTitle: "gkmetalworks1983@gmail.com",
+        link: "https://mail.google.com/mail/u/0/",
     },
 ];
 
